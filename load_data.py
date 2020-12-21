@@ -1,16 +1,7 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import networkx as nx
-import pandas as pd
-import collections
 
-
-df = pd.read_csv("tij_InVS.dat", sep= " ", header=None)
-df["weight"] = 1 
-df.columns = ["t", "i", "j", "weight"]
-
-print(df["i"][0])
 
 def load_sociopatterns_network():
     df = pd.read_csv("tij_InVS.dat", sep= " ", header=None)
@@ -40,5 +31,3 @@ def drawGraph (G, pos = None):
     plt.show()
     
 
-G = load_sociopatterns_network()
-drawGraph(G)
